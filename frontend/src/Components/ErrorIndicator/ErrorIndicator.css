@@ -1,0 +1,15 @@
+.error-indicator {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.error-indicator span {
+	display: block;
+	flex-basis: 100%;
+	text-align: center;
+	color: red;
+	font-size: 1.2rem;
+	font-weight: 700;
+}

@@ -1,0 +1,22 @@
+export default {
+    name:'contact',
+    title:'Контакти',
+    type:'document',
+    fields:[
+        {
+            name:'name',
+            title:'Ім\'я',
+            type:'string'
+        },
+        {
+            name:'email',
+            title:'Email',
+            type:'string'
+        },
+        {
+            name:'message',
+            title:'Повідомлення',
+            type:'text'
+        }
+    ]
+}

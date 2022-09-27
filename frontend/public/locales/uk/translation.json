@@ -1,0 +1,13 @@
+{
+    "select_language": "Оберіть мову",
+    "hello_welcome_to_react": "Hello, Welcome to React",
+    "this_is_an_example": "This is an example",
+    "please_enter_name": "Please enter your name",
+    "bohdan": "Богдан",
+    "hello_i_am": "Привіт, я",
+    "home": "Головна",
+    "about": "Про мене",
+    "portfolio": "Портфоліо",
+    "skills": "Навички",
+    "contacts": "Контакти"
+}
