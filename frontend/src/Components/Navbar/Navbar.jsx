@@ -7,6 +7,7 @@ import { images } from '../../Constants';
 import { useTranslation } from "react-i18next";
 
 
+
 const variants = {
     visible: (custom) => ({
       opacity: 1,
@@ -20,6 +21,8 @@ const variants = {
         transition: { delay: custom * 0.1, duration: 0.75 }
     })
   }
+
+
 
 
 
@@ -58,7 +61,7 @@ const Navbar = () => {
                     </li>
                 ))}
             </ul>
-            <LanguageSelect></LanguageSelect>
+                <LanguageSelect />
             <div
                 className="app__navbar-menu"
             >
@@ -103,7 +106,6 @@ const Navbar = () => {
                                     ))}
                                 </ul>
                             </motion.div>
-                            
                         )
                     }
                 </AnimatePresence>

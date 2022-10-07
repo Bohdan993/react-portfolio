@@ -23,6 +23,14 @@ const variants = {
     }
 }
 
+const classNames = [
+    ['circle-1', 'circle-position-3', 'circle-type-1'],
+    ['circle-2', 'circle-position-2', 'circle-type-3'],
+    ['circle-3', 'circle-position-1', 'circle-type-2'],
+    ['circle-4', 'circle-position-5', 'circle-type-5'],
+    ['circle-5', 'circle-position-4', 'circle-type-5'],
+]
+
 const Header = () => {
       const { t } = useTranslation();
     return (
@@ -34,14 +42,27 @@ const Header = () => {
                 transition={{duration: 0.75}}
                 className="app__header-info"
             >
-                <div
+                <article className="app__preview-info">
+                    <div className="app__preview-text">
+                        <h1 className="head-text h1">
+                            <span>Frontend<br/> Developer</span>
+                        </h1>
+                        <p className="head-subtext">I like to craft solid and scalable frontend products with great user experiences.</p>
+                    </div>
+                    <ul>
+                        <li>Highly skilled at progressive enhancement, design systems &amp; UI Engineering.</li>
+                        <li>Over a decade of experience building products for clients across several countries.</li>
+                    </ul>
+                    <a className="button" href="#">Let's talk</a>
+                </article>
+                {/* <div
                     className="app__header-badge"
                 >
                     <div
                         className="badge-cmp app__flex"
                     >
                         <span>
-                            👋
+                            
                         </span>
                         <div
                             style={{marginLeft: 20}}
@@ -72,7 +93,7 @@ const Header = () => {
                                 Freelancer
                             </p>
                     </div>
-                </div>
+                </div> */}
             </motion.div>
             <motion.div
                 whileInView={{opacity: [0, 1]}}
@@ -83,17 +104,17 @@ const Header = () => {
                     src={images.profile}
                     alt="Profile"
                 ></img>
-                <motion.img
+                
+                {/* <motion.img
                     whileInView={{scale: [0, 1]}}
                     transition={{duration: 1, ease: "easeInOut"}}
                     src={images.circle}
                     alt="Profile Circle"
                     className="overlay_circle"
                 >
-
-                </motion.img>
+                </motion.img> */}
             </motion.div>
-            <motion.div
+            {/* <motion.div
                 variants={variants}
                 whileInView={variants.whileInView}
                 className="app__header-circles"
@@ -111,9 +132,9 @@ const Header = () => {
 
                     </div>
                 ))}
-            </motion.div>
+            </motion.div> */}
         </div>
     );
 };
 
-export default withAppWrap(Header, 'home');
+export default withAppWrap(Header, 'home', 'home-container', classNames);

@@ -8,6 +8,16 @@ import { Skills } from '../../Container/Skills';
 import { Testimonial } from '../../Container/Testimonial';
 import { Work } from '../../Container/Work';
 import { Navbar } from '../Navbar';
+import { createTheme, ThemeProvider } from '@material-ui/core';
+
+
+const theme = createTheme({
+  typography: {
+      fontFamily: ['Futura PT', 'sans-serif'].join(','),
+      fontSize: 16
+  }
+});
+
 
 
 
@@ -15,15 +25,17 @@ function App() {
 
   return (
     <ErrorBoundary>
-      <div className="app">
-        <Navbar></Navbar>
-        <Header></Header>
-        <About></About>
-        <Work></Work>
-        <Skills></Skills>
-        <Testimonial></Testimonial>
-        <Footer></Footer>
-      </div>
+      <ThemeProvider theme={theme}>
+        <div className="app">
+          <Navbar></Navbar>
+          <Header></Header>
+          <Work></Work>
+          <About></About>
+          <Skills></Skills>
+          <Testimonial></Testimonial>
+          <Footer></Footer>
+        </div>
+      </ThemeProvider>
     </ErrorBoundary>
   );
 }

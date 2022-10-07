@@ -1,0 +1,15 @@
+.language-select-root {
+    .MuiButton-root {
+        transition: all 0.3s ease-in-out;
+    }
+    .MuiButton-root:hover {
+        background-color: transparent;
+        color: var(--secondary-color);
+    }
+}
+
+.MuiListItem-button.language-list-item {
+    &:hover {
+        background-color: var(--primary-color);
+    }
+}

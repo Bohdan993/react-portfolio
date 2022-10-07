@@ -1,6 +1,6 @@
 #home {
     position: relative;
-    background: url("../../Assets/bgIMG.png");
+    // background: url("../../Assets/bgIMG.png");
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
@@ -13,6 +13,24 @@
         display: none;
       }
     }
+  }
+
+  .home-container {
+    height: 100vh;
+
+    @media screen and (max-width: 1200px) {
+      height: auto;
+    }
+  }
+
+  .h1 {
+    font-size: 4.4rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .head-subtext {
+    font-size: 1.3rem;
+    text-align: center;
   }
   
   .app__header {
@@ -35,13 +53,29 @@
       padding: 6rem 1rem 2rem;
     }
   }
+
+  .app__preview-info {
+    text-align: center;
+    ul {
+      list-style: none;
+      display: flex;
+      margin-bottom: 2rem;
+    }
+
+    li{
+      margin: 0 2.25rem;
+      max-width: 240px;
+      text-align: center;
+    }
+  }
+  
   
   .app__header-info {
-    flex: 0.65;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     height: 100%;
   
     margin: 0 2rem;
@@ -50,6 +84,10 @@
       width: 100%;
       margin-right: 0rem;
     }
+  }
+
+  .app__preview-text {
+    margin-bottom: 4rem;
   }
   
   .app__header-badge {
@@ -192,11 +230,11 @@
   }
   
   .app__header-img {
-    flex: 1;
+    flex: 0.85;
     height: 100%;
   
     display: flex;
-    justify-content: flex-end;
+    justify-content: left;
     align-items: flex-end;
     position: relative;
   
@@ -204,6 +242,7 @@
       width: 100%;
       object-fit: contain;
       z-index: 1;
+      max-width: 576px;
     }
   
     .overlay_circle {

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {withAppWrap} from '../../HOC';
+import {withAppWrap, withMotionWrap} from '../../HOC';
 import {motion} from 'framer-motion';
 import './About.scss';
 
@@ -29,6 +29,13 @@ const testData = [
         image: images.about04
     }
 ]
+
+const classNames = [
+    ['circle-2', 'circle-position-3', 'circle-type-1'],
+    ['circle-2', 'circle-position-4', 'circle-type-3'],
+    ['circle-3', 'circle-position-6', 'circle-type-5'],
+]
+
 
 const About = () => {
 
@@ -124,4 +131,4 @@ const About = () => {
     );
 };
 
-export default withAppWrap(About, 'about');
+export default withAppWrap(withMotionWrap(About, 'app__about'), 'about', 'about-container', classNames);

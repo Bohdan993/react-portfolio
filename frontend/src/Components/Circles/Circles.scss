@@ -1,0 +1,121 @@
+.circles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+
+    &.circle-1 {
+        width: 300px;
+        height: 300px;
+    }
+
+    &.circle-2 {
+        width: 175px;
+        height: 175px;
+    }
+
+    &.circle-3 {
+        width: 80px;
+        height: 80px;
+    }
+
+    &.circle-4 {
+        width: 40px;
+        height: 40px;
+    }
+
+    &.circle-5 {
+        width: 245px;
+        height: 245px;
+    }
+
+    &.circle-type-1 {
+        background-image: linear-gradient(to right top, #0cd448, #49d853, #68dd5e, #80e16a, #94e576);
+        opacity: 0.53;
+    }
+
+    &.circle-type-2 {
+        background-image: linear-gradient(to left, #0cd448, #49d853, #68dd5e, #80e16a, #94e576);
+        opacity: 0.28;
+    }
+
+    &.circle-type-3 {
+        background-image: linear-gradient(to right bottom, #0cd448, #49d853, #68dd5e, #80e16a, #94e576);
+        opacity: 0.35;
+    }
+
+    &.circle-type-4 {
+        background-image: linear-gradient(to bottom, #0cd448, #49d853, #68dd5e, #80e16a, #94e576);
+        opacity: 0.53;
+    }
+
+    &.circle-type-5 {
+        background-image: linear-gradient(to top, #0cd448, #49d853, #68dd5e, #80e16a, #94e576);
+        opacity: 0.84;
+    }
+
+    &.circle-position-1 {
+        left: 10%;
+        top: 15%;
+    }
+
+    &.circle-position-2 {
+        left: 22%;
+        top: 68%;
+    }
+
+    &.circle-position-3 {
+        left: 84%;
+        top: 35%;
+    }
+
+    &.circle-position-4 {
+        left: 54%;
+        top: 52%;
+    }
+
+    &.circle-position-5 {
+        left: 57%;
+        top: 19%;
+    }
+
+    &.circle-position-6 {
+        left: 12%;
+        top: 75%;
+    }
+
+    &.circle-position-7 {
+        left: 88%;
+        top: 82%;
+    }
+
+    &.circle-position-8 {
+        left: 33%;
+        top: 41%;
+    }
+
+    &.circle-position-9 {
+        left: 57%;
+        top: 19%;
+    }
+
+    &.circle-position-10 {
+        left: 57%;
+        top: 19%;
+    }
+}
+
+// $num: 10;
+// @for $i from 1 through $num {
+//     $d: rand();
+//     circle.circle-#{$i} {
+//         // margin: 1.25rem;
+//         width: $d;
+//         height: $d;
+//     }
+// }
