@@ -29,7 +29,14 @@ const variants = {
 const Navbar = () => {
     const [toggle, setToggle] = useState(false);
     const { t } = useTranslation();
-    const menuItems = useMemo(()=> [t('home'), t('about'), t('portfolio'), t('skills'), t('contacts')], [t]);
+    const menuItems = useMemo(()=> [
+        {name: t('home'), id: 'home'}, 
+        {name: t('about'), id: 'about'}, 
+        {name: t('portfolio'), id: 'work'}, 
+        {name: t('skills'), id: 'skills'}, 
+        {name: t('contacts'), id: 'contacts'}
+    ], [t]);
+    console.log(menuItems);
     return (
         <nav
             className="app__navbar"
@@ -45,21 +52,21 @@ const Navbar = () => {
             <ul
                 className="app__navbar-links"
             >
-                { menuItems.map(item=>(
+                { menuItems.map(item=>{return (
                     <li
-                        key={item}
+                        key={item.id}
                         className="app__flex p-text"
                     >
                         <div>
 
                         </div>
                         <a
-                            href={`#${item}`}
+                            href={`#${item.id}`}
                         >
-                            {item}
+                            {item.name}
                         </a>
                     </li>
-                ))}
+                )})}
             </ul>
                 <LanguageSelect />
             <div
@@ -89,7 +96,7 @@ const Navbar = () => {
                                 >
                                     { menuItems.map((item, index) => (
                                         <motion.li
-                                            key={item}
+                                            key={item.id}
                                             custom={index}
                                             initial="exit"
                                             animate="visible" 
@@ -97,10 +104,10 @@ const Navbar = () => {
                                             variants={variants}
                                         >
                                             <a
-                                                href={`#${item}`}
+                                                href={`#${item.id}`}
                                                 onClick={()=>setToggle(false)}
                                             >
-                                                {item}
+                                                {item.name}
                                             </a>
                                         </motion.li>
                                     ))}

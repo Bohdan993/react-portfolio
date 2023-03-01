@@ -1,16 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import { motion } from 'framer-motion';
 import {HiChevronLeft, HiChevronRight} from 'react-icons/hi';
-import withAppWrap from '../../HOC/withAppWrap';
+import { withMotionWrap, withAppWrap } from '../../HOC';
 import { useTranslation } from "react-i18next";
 import { urlFor, client } from '../../Api/sanity';
 
 import './Testimonial.scss';
 
 
+
 const classNames = [
-    ['circle-3', 'circle-position-4', 'circle-type-4'],
-    ['circle-2', 'circle-position-2', 'circle-type-3'],
+    ['circle-1', 'circle-position-8', 'circle-type-5'],
+    ['circle-3', 'circle-position-6', 'circle-type-3'],
+    ['circle-4', 'circle-position-10', 'circle-type-2'],
 ]
 
 const Testimonial = () => {
@@ -41,6 +43,7 @@ const Testimonial = () => {
 
     return (
         <>
+            <h2 className="head-text">Testimonial</h2>
             {testimonials.length && (
                 <>
                     <div 
@@ -90,7 +93,6 @@ const Testimonial = () => {
                     </div>
                 </>
             )}
-
             <div
                 className="app__testimonial-brands app__flex"
             >
@@ -110,5 +112,5 @@ const Testimonial = () => {
     );
 };
 
-export default withAppWrap(Testimonial, 'testimonial', 'testimonial-container', classNames);
+export default withAppWrap(withMotionWrap(Testimonial, 'app__testimonial'), 'testimonial', 'testimonial-container', classNames);
 
